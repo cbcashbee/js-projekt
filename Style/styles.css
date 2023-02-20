@@ -2,17 +2,6 @@ body {
     background: #faf9f8;
 }
 
-header {
-    background: aqua;
-    display: flex;
-    justify-content: space-between;
-}
-
-li {
-    display: flex;
-    flex-direction: column;
-}
-
 /* Dropdown Button */
 .dropbtn {
     background-color: #3498DB;
