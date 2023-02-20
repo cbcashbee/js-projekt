@@ -1,0 +1,66 @@
+/*BODY: Baggrundsfarve og typografi*/
+body {
+    background: #faf9f8;
+    padding: 30px;
+}
+
+@font-face {
+    font-family: 'HM Sans Regular';
+    src: url(../Fonts/HMSans-Regular.woff2);
+    font-display: swap; /* Note: swap gives the font face a zero second block period and an infinite swap period. This means the browser draws text immediately with a fallback if the font face isn't loaded, but swaps the font face in as soon as it loads.*/
+}
+
+p, nav a, button {
+    font-family: 'HM Sans Regular';
+    text-align: center;
+}
+
+section p, li {
+    font-size: 12px;
+}
+
+/*HEADER: Venstre menu, logo og højre menu*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: inline-flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    font-family: 'HM Sans Regular';
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+}
+
+#logo {
+    width: 61px;
+    height: 40px;
+}
+
+
+/*SECTION: Nav, tekst og galleri*/
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+nav a {
+    padding: 15px;
+}
