@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="Style/styles.css">
     <link rel="stylesheet" href="Style/main.css">
     <script src="Script/java.js"defer></script>
+    <script src="Script/galleri.js" defer></script>
 </head>
 
 
@@ -62,28 +63,35 @@
        </ul>
     </header>
 
-    <section>
-        <nav>
-            <a>Dame</a>
-            <a>Herre</a>
-            <a>Divided</a>
-            <a>Baby</a>
-            <a>Børn</a>
-            <a>H&M HOME</a>
-            <a>Beauty</a>
-            <a>Sport</a>
-            <a>Sustainability</a>
-        </nav>
-        <p>For H&M Members: fri fragt ved standardlevering på ordrer over 150kr.</p>
+    <nav>
+        <a>Dame</a>
+        <a>Herre</a>
+        <a>Divided</a>
+        <a>Baby</a>
+        <a>Børn</a>
+        <a>H&M HOME</a>
+        <a>Beauty</a>
+        <a>Sport</a>
+        <a>Sustainability</a>
+    </nav>
+    
+    <p>For H&M Members: fri fragt ved standardlevering på ordrer over 150kr.</p>
 
-        <!--GALLERI-->
-        <div id="galleri">
-            <img id="img1" src="Images/img1.jpg.avif">
-            <img id="img2" src="Images/img2.jpg.avif">
-            <img id="img3" src="Images/img3.jpg.avif">
-            <img id="img4" src="Images/img4x.jpg.avif">
-        </div>
-    </section>
+    <!-- GALLERI – Kilde: https://webdesign.tutsplus.com/tutorials/how-to-build-a-simple-carousel-with-vanilla-javascript--cms-41734 -->
+    <section class="slider-wrapper">
+        <button class="slide-arrow" id="slide-arrow-prev">
+          &#8249;
+        </button>
+        <button class="slide-arrow" id="slide-arrow-next">
+          &#8250;
+        </button>
+        <ul class="slides-container" id="slides-container">
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+        </ul>
+      </section>
 
     
 </body>
