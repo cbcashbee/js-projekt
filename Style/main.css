@@ -14,7 +14,7 @@ body {
     font-display: swap; /* Note: swap gives the font face a zero second block period and an infinite swap period. This means the browser draws text immediately with a fallback if the font face isn't loaded, but swaps the font face in as soon as it loads.*/
 }
 
-p, nav a, button {
+p, nav a, button, .dropdown-content a {
     font-family: 'HM Sans Regular';
     text-align: center;
 }
@@ -23,7 +23,8 @@ section p, li {
     font-size: 12px;
 }
 
-/*HEADER: Venstre menu, logo og højre menu*/
+
+/*HEADER: Venstre menu, logo og højre menu, dropdown*/
 header {
     display: flex;
     justify-content: space-between;
@@ -56,14 +57,57 @@ li {
     height: 40px;
 }
 
-
-/*SECTION: Nav, tekst og galleri*/
-
-section {
-  max-width: 1440px;
-  margin: auto;
+/* Dropdown knap */
+.dropbtn {
+  background-color: #cc071e;
+  color: white;
+  padding: 12px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
 }
 
+/* Dropdown knap – Hover */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #b20519;
+}
+
+/* Container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown indhold */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Sprog */
+.dropdown-content a {
+  color: black;
+  padding: 7px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Sprog – Hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Viser dropdown-menuen i JS */
+.show {
+  display:block;
+}
+
+
+/*NAVIGATION*/
 nav {
     display: flex;
     justify-content: center;
@@ -75,76 +119,90 @@ nav a {
     padding: 15px;
 }
 
-/*Galleri*/
-.slider-wrapper {
-  margin: 1rem;
+
+/*SLIDESHOW*/
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
   position: relative;
-  overflow: hidden;
-}
-
-.slides-container {
-  height: calc(100vh - 2rem);
-  width: 100%;
-  display: flex;
-  overflow: scroll;
-  scroll-behavior: smooth;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.slide-arrow {
-  position: absolute;
-  display: flex;
-  top: 0;
-  bottom: 0;
   margin: auto;
-  height: 4rem;
-  background-color: white;
-  border: none;
-  width: 2rem;
-  font-size: 3rem;
-  padding: 0;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
   cursor: pointer;
-  opacity: 0.5;
-  transition: opacity 100ms;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #cc071e;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-.slide-arrow:hover,
-.slide-arrow:focus {
-  opacity: 1;
-}
-
-#slide-arrow-prev {
-  left: 0;
-  padding-left: 0.25rem;
-  border-radius: 0 2rem 2rem 0;
-}
-
-#slide-arrow-next {
+/* Position the "next button" to the right */
+.next {
   right: 0;
-  padding-left: 0.75rem;
-  border-radius: 2rem 0 0 2rem;
+  border-radius: 3px 0 0 3px;
 }
 
-.slide {
-  width: 100%;
-  height: 100%;
-  flex: 1 0 100%;
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.055);
 }
-  
-  .slide:nth-child(1) {
-    background: url(../Images/img1.jpg.avif);
-  }
-  
-  .slide:nth-child(2) {
-    background: url(../Images/img2.jpg.avif);
-  }
-  
-  .slide:nth-child(3) {
-    background: url(../Images/img3.jpg.avif);
-  }
-  
-  .slide:nth-child(4) {
-    background: url(../Images/img4.jpg.avif);
-  }
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
