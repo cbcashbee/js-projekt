@@ -14,7 +14,7 @@ body {
     font-display: swap; /* Note: swap gives the font face a zero second block period and an infinite swap period. This means the browser draws text immediately with a fallback if the font face isn't loaded, but swaps the font face in as soon as it loads.*/
 }
 
-p, nav a, button, .dropdown-content a {
+p, nav a, button, .dropdown-content a, .text, .numbertext {
     font-family: 'HM Sans Regular';
     text-align: center;
 }
@@ -163,6 +163,7 @@ nav a {
 /* Caption text */
 .text {
   color: #f2f2f2;
+  background-color: #000000;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -173,7 +174,7 @@ nav a {
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
+  color: rgba(0, 0, 0, 0.3);
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
