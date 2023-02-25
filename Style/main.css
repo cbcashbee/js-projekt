@@ -133,6 +133,12 @@ nav a {
   display: none;
 }
 
+.img {
+  width: 1000px;
+  height: 667px;
+  object-fit: cover;
+}
+
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
